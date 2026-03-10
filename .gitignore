@@ -1,0 +1,22 @@
+# Dependencias
+node_modules/
+.pnpm-store/
+
+# Archivos de Astro
+dist/
+.astro/
+.vercel/
+.output/
+
+# Logs y bases de datos locales
+*.log
+*.sqlite
+.env
+.env.*
+!.env.example
+
+# OS y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
