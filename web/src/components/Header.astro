@@ -1,24 +1,130 @@
 ---
 ---
-<header>
-  <img src="" alt="logo">
-  <nav>
-    <a href="#">Proyectos</a>
-    <a href="#">Sobre mí</a>
-    <a href="#">Habilidades</a>
-    <a href="#">Contacto</a>
-  </nav>
-  <section>
-    <button>
-      escribeme
-    </button>
-  </section>
-  <section>
-    <button>
-      diurno o oscuro
-    </button>
-    <section>
-      <p>iconos</p>
-    </section>
-  </section>
+
+<header class="sticky top-0 z-50 w-full border-b bg-slate-900/80 backdrop-blur-md border-slate-800 transition-all duration-500">
+  <div class="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center gap-2">
+      <a href="#" class="text-2xl font-bold tracking-tight text-indigo-400 hover:text-indigo-300 transition-colors cursor-pointer">
+        l1tesg
+      </a>
+    </div>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+      <a href="#proyectos" class="hover:text-indigo-400 transition-colors">Proyectos</a>
+      <a href="#sobre-mi" class="hover:text-indigo-300 transition-colors">Sobre mí</a>
+      <a href="#habilidades" class="hover:text-indigo-300 transition-colors">Habilidades</a>
+      <a href="#contacto" class="hover:text-indigo-300 transition-colors">Contacto</a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <a href="#contacto" class="inline-flex items-center justify-center rounded-md bg-indigo-500 px-4 py-2 text-sm font-medium text-white shadow transition-colors hover:bg-indigo-400">
+        Escríbeme
+      </a>
+      
+      <button id="profile-trigger" class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center border border-slate-700 cursor-pointer hover:border-indigo-500/50 hover:bg-slate-700 transition-all overflow-hidden focus:outline-none focus:ring-2 focus:ring-indigo-500/50">
+        <span class="text-xs font-bold text-indigo-400">JS</span>
+      </button>
+    </div>
+  </div>
 </header>
+
+<!-- Perfil Modal -->
+<div id="profile-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+  <div id="modal-overlay" class="absolute inset-0 bg-slate-950/40 backdrop-blur-md transition-opacity duration-500 ease-out opacity-0"></div>
+  
+  <div id="modal-content" class="relative w-full max-w-md translate-y-8 scale-90 opacity-0 transition-all duration-500 cubic-bezier-bounce">
+    <div class="overflow-hidden rounded-3xl border border-white/10 bg-slate-900/90 backdrop-blur-xl shadow-[0_0_50px_-12px_rgba(79,70,229,0.5)]">
+      <!-- Header del Modal -->
+      <div class="h-32 bg-gradient-to-br from-indigo-600 to-purple-700 relative">
+        <button id="close-modal" class="absolute top-4 right-4 p-2 rounded-full bg-black/20 text-white hover:bg-black/40 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      
+      <!-- Contenido del Perfil -->
+      <div class="relative px-8 pb-10">
+        <!-- Avatar con anillo de gradiente -->
+        <div class="absolute -top-14 left-8 p-1 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-500 shadow-2xl shadow-indigo-500/20">
+          <div class="h-24 w-24 rounded-[14px] bg-slate-900 flex items-center justify-center overflow-hidden border-2 border-slate-900">
+            <span class="text-3xl font-black bg-clip-text text-transparent bg-gradient-to-br from-indigo-400 to-purple-400">JS</span>
+          </div>
+        </div>
+        
+        <div class="pt-16 space-y-3">
+          <div>
+            <h3 class="text-3xl font-extrabold text-white tracking-tight">Juan Felipe</h3>
+            <p class="text-indigo-400 font-semibold tracking-wide text-sm uppercase">Full Stack Developer</p>
+          </div>
+          
+          <p class="text-slate-400 text-base leading-relaxed">
+            Especializado en crear experiencias digitales fluidas con Astro, React y Node.js. Apasionado por el código limpio y la arquitectura moderna.
+          </p>
+        </div>
+        
+        <div class="mt-10 pt-8 border-t border-white/5 space-y-4">
+          <h4 class="text-xs font-bold text-slate-500 uppercase tracking-widest">Conecta conmigo</h4>
+          <div class="grid grid-cols-2 gap-4">
+            <a href="https://github.com" target="_blank" class="flex items-center justify-center gap-3 p-3 rounded-xl bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/5 transition-all group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+              <span class="text-sm font-bold">GitHub</span>
+            </a>
+            <a href="#" class="flex items-center justify-center gap-3 p-3 rounded-xl bg-white/5 text-slate-300 hover:text-white hover:bg-white/10 border border-white/5 transition-all group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+              <span class="text-sm font-bold">LinkedIn</span>
+            </a>
+          </div>
+          <button class="w-full py-4 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-500 shadow-xl shadow-indigo-600/20 transition-all active:scale-[0.98]">
+            Descargar CV
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  const trigger = document.getElementById('profile-trigger');
+  const modal = document.getElementById('profile-modal');
+  const overlay = document.getElementById('modal-overlay');
+  const content = document.getElementById('modal-content');
+  const closeBtn = document.getElementById('close-modal');
+
+  const openModal = () => {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    
+    requestAnimationFrame(() => {
+      overlay.classList.add('opacity-100');
+      content.classList.add('translate-y-0', 'scale-100', 'opacity-100');
+    });
+    
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    overlay.classList.remove('opacity-100');
+    content.classList.remove('translate-y-0', 'scale-100', 'opacity-100');
+    
+    setTimeout(() => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }, 500);
+  };
+  trigger.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+</script>
+
+<style>
+  .cubic-bezier-bounce {
+    transition-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+</style>
